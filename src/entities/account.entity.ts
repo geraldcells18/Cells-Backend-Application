@@ -4,9 +4,9 @@ import accountSettings from '../settings/settings.account';
 @Entity()
 export class Users {
   @PrimaryGeneratedColumn()
-  id: number;
+  ID: number;
 
-  @Column()
+  @Column(accountSettings())
   firstName: string;
 
   @Column(accountSettings())

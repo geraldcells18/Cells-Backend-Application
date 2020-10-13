@@ -38,7 +38,7 @@ export class UserService {
 
   async checkUserCredentials(username: string, password: string,): Promise<Users> {
     return await this.user.findOne({
-      select: ['id', 'firstName', 'lastName'],
+      select: ['ID', 'firstName', 'lastName'],
       where: [{ username: username, password: password }],
     });
   }
